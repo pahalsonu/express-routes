@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const fs = require('fs');
 const adminroutes = require('./routes/admin');
+const managerroutes = require('./routes/manager');
 const port = process.env.PORT || 3000;
 
 app.use(express.static('public'))
 //admin routes
 app.use('/admin', adminroutes)
+app.use('/manager', managerroutes)
 
 
 
